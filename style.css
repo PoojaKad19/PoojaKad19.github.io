@@ -1,0 +1,194 @@
+/* Color Variables for easy theme adjustments */
+/* Color Variables for easy theme adjustments */
+:root {
+    --color-dark-bg: #0A0A0A;       /* Almost Black Background */
+    --color-card-bg: #1C1C1C;       /* Dark Grey/Black for Cards */
+    --color-header-bg: #111111;     /* Slightly Lighter Black for Header Strip */
+    
+    --color-text-light: #E0E0E0;    /* Light Grey Text */
+    /* UPDATED: Brighter wine color for high contrast */
+    --color-wine-primary: #C70039; 
+    --color-project-name-primary: #c58194;  
+    --color-maroon-accent: #C70039; /* Retained the same bright wine for consistency */
+}
+
+/* ... existing CSS ... */
+
+/* NEW/UPDATED STYLE: Increase font size and ensure color for job titles */
+.resume-section-card h4 {
+    color: var(--color-wine-primary); /* Brighter color */
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 5px;
+    font-size: 1.25em; /* INCREASED FONT SIZE */
+    font-weight: 700;
+}
+
+/* ... rest of your style.css ... */
+
+/* Base Styles */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    font-size: 1.3em;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header/Navigation */
+header {
+    background-color: var(--color-header-bg); 
+    padding: 10px 0;
+    border-bottom: 2px solid var(--color-maroon-accent);
+}
+
+header h1 {
+    /* Main Name in Wine Color */
+    color: var(--color-maroon-accent); 
+    display: inline-block;
+    margin: 0;
+}
+
+nav {
+    float: right;
+    margin-top: 5px;
+}
+
+nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-maroon-accent); /* Highlight nav links in brighter wine */
+}
+
+.cta-button {
+    background-color: var(--color-maroon-accent);
+    color: white !important; /* Force white text on maroon */
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hero Section */
+#hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    /* Main Title/Profession in Wine Color */
+    color: var(--color-wine-primary); 
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+/* Projects/Card Styles */
+#projects {
+    padding-bottom: 50px;
+}
+
+#projects h3 {
+    /* Section Headers in Wine Color */
+    color: var(--color-wine-primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background-color: var(--color-card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /* Maroon accent border on the left */
+    border-left: 5px solid var(--color-maroon-accent); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}
+
+.project-card h4 {
+    /* Project Title in Wine Color */
+    color: var(--color-h4-primary); 
+    margin-top: 0;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: var(--color-maroon-accent); /* Tech tags in brighter wine */
+    color: white;
+    padding: 4px 8px;
+    margin-right: 8px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.project-link {
+    display: block;
+    margin-top: 15px;
+    color: var(--color-maroon-accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-header-bg);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    border-top: 2px solid var(--color-maroon-accent);
+}
+
+/* Style for inline project links next to tech tags */
+.inline-link {
+    /* Ensures it stays on the same line as the span tags */
+    display: inline-block; 
+    
+    /* Make it look like a button/tag but keep the link style */
+    font-size: 0.9em;
+    padding: 3px 8px;
+    margin-left: 10px; /* Add some space after the last tech tag */
+    border: 1px solid var(--color-maroon-accent);
+    color: var(--color-maroon-accent) !important;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.inline-link:hover {
+    background-color: var(--color-maroon-accent);
+    color: var(--color-text-light) !important;
+}
+
+/* Ensure tech tags are inline too (you likely already have this) */
+.tech-tag {
+    display: inline-block; 
+    /* ... rest of your tech-tag styles ... */
+}
+
+
+/* This targets project titles (like "LLM for Predicting Pancreatic Disease") */
+.sub-project-block h5 {
+    color: var(--color-project-name-primary); /* Changed to the light grey/white color */
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
