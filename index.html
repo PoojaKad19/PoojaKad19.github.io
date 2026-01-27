@@ -1,335 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pooja Suresh Kadam | AI/ML Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Sora:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS for resume structure (can be moved to style.css if desired) */
-        .contact-details {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-            padding: 20px 0;
-            border-top: 1px solid var(--color-card-bg);
-            border-bottom: 1px solid var(--color-card-bg);
-        }
-        .contact-details a, .contact-details span {
-            color: var(--color-text-light);
-            text-decoration: none;
-            margin: 5px 10px;
-            font-size: 0.95em;
-            display: inline-block;
-        }
-        .contact-details a:hover {
-            color: var(--color-maroon-accent);
-        }
-        .resume-section-card {
-            background-color: var(--color-card-bg);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 5px solid var(--color-maroon-accent);
-        }
-        .resume-section-card h4 {
-            /* Job titles (AI/ML Engineer, Data Science Intern) */
-            margin-top: 0;
-            margin-bottom: 10px;
-            border-bottom: 1px dashed #333;
-            padding-bottom: 5px;
-        }
-        .resume-section-card p, .resume-section-card ul {
-            margin: 10px 0;
-        }
-        .resume-section-card ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin-bottom: 5px; 
-        }
-
-        /* TIGHT LAYOUT FOR PROFESSIONAL SUMMARY */
-        #summary {
-            margin-bottom: 20px; /* Reduce space below the section */
-            margin-top: -10px; /* Pull it slightly higher */
-        }
-        #summary h3 {
-             margin-top: 0; 
-             margin-bottom: 5px; /* Tighten space below heading */
-        }
-        #summary p {
-             margin-top: 5px;
-             margin-bottom: 5px; /* Tighten paragraph spacing */
-        }
-
-        /* STYLES for projects inside the Professional Experience block */
-        .sub-project-block {
-            margin-top: 20px;
-            padding-left: 15px;
-            border-left: 3px solid #333; 
-            margin-bottom: 25px;
-        }
-        .project-skills {
-            margin-top: 10px;
-            padding-top: 5px;
-        }
-
-        /* STYLES FOR PROJECT IMAGES */
-        .project-image-thumb {
-            width: 100%; /* Make image span the width of the card */
-            max-height: 200px; /* Set a max height for uniformity */
-            object-fit: cover; /* Ensure image covers the area without distortion */
-            border-radius: 4px;
-            margin-bottom: 15px; /* Space between image and title */
-        }
-        
-    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>POOJA SURESH KADAM</h1>
-            <nav>
-                <a href="#summary">Summary</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="mailto:poojakad@bu.edu" class="cta-button">Contact</a>
-            </nav>
+
+<body data-theme="dark">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="identity">
+                <div class="identity-top">
+                    <div class="logo-chip">PK</div>
+                    <div class="logo-text">
+                        <p class="logo-name">Pooja Kadam</p>
+                        <p class="logo-role"><br>
+                            <bold>AI / ML Scientist</bold>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-inline contact-bar">
+                    <a href="mailto:poojakad@bu.edu" data-section="#contact-email">Email</a>
+                    <span>·</span>
+                    <a href="https://www.linkedin.com/in/poojasureshkadam/" target="_blank" rel="noreferrer"
+                        data-section="#contact-linkedin">LinkedIn</a>
+                    <span>·</span>
+                    <a href="https://github.com/PoojaKad19" target="_blank" rel="noreferrer"
+                        data-section="#contact-github">GitHub</a>
+                </div>
+            </div>
+            <div class="header-actions">
+                <nav class="site-nav">
+                    <a href="#summary">Summary</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#publication">Publication</a>
+                    <a href="#skills">Skills</a>
+                </nav>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+                    <span class="toggle-icon">☾</span>
+                    <span class="toggle-label">Dark</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <section id="contact" class="container">
-        <div class="contact-details">
-            <a href="mailto:poojakad@bu.edu">Email: poojakad@bu.edu</a>
-            <span>Phone: 781-658-4717</span>
-            <span>Location: Boston, MA</span>
-            <a href="https://www.linkedin.com/in/poojasureshkadam/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/PoojaKad19" target="_blank">GitHub</a>
-            <a href="[Your Google Scholar URL]" target="_blank">Google Scholar</a>
-        </div>
-    </section>
-
-    <section id="summary" class="container">
-        <h3 style="color: var(--color-wine-primary); text-align: left; font-size: 1.5em;">Professional Summary</h3>
-        <p>
-            <li>AI/ML Engineer with 1+ year experience contributing to development, deployment, and monitoring of scalable AI solutions including GenAI, agentic AI, and MLOPS across cloud environments (GCP, Databricks, Snowflake), with expertise in supporting CI/CD pipelines for batch, online, and edge training/inference workflows.</li>
-        </p>
-        <p>
-            <li>Proven track record eliciting functional requirements through wireframes, GUI designs, and end-to-end testing while serving diverse customers in clinical and research environments, providing updates to client-facing leads, business owners, and internal stakeholders to ensure auditable, high-accuracy model lifecycle management.</li>
-        </p>
-    </section>
-    
-    <section id="skills" class="container">
-        <h3 style="color: var(--color-wine-primary); text-align: left;font-size: 1.5em;">Core & Technical Skills</h3>
-        <div class="resume-section-card">
-            <h4>Languages & Analytics</h4>
-            <p>
-                <strong>Languages:</strong> Python, R, SQL, C, MATLAB, PHPMySQL.
-                <br>
-                <strong>Analytics:</strong> Statistical analysis, experiment design, dashboards (Power BI), Advanced Excel, Git/GitLab/GitHub.
-            </p>
-            
-            <h4>Generative AI & NLP</h4>
-            <ul>
-                <li><strong>LLM/GenAI:</strong> GPT, GPT4DFCI, Llama, Mixtral, T5, FlanT5, embeddings, vector stores, RAG, prompt engineering, finetuning, safety/guardrails.</li>
-                <li><strong>Agentic AI:</strong> Multiagent planners, tooluse, memory, evaluators; LangChain, Semantic Kernel; task decomposition and self-correction.</li>
-                <li><strong>NLP Tasks:</strong> Text classification, NER, summarization, topic modeling, dialogue systems, information retrieval, weak supervision, data labeling.</li>
-            </ul>
-            
-            <h4>MLOPS, Cloud & Apps</h4>
-            <ul>
-                <li><strong>MLOPS:</strong> Docker, CI/CD, MLflow, W&B, TensorBoard, telemetry, model/version registry, shadow tests and rollbacks.</li>
-                <li><strong>Cloud/Data:</strong> GCP (Vertex AI, BigQuery), Databricks, Snowflake; SQL pipelines and feature stores.</li>
-                <li><strong>Apps/UI:</strong> UI/UX, Streamlit apps, FastAPI, Flask services, audit trails, testing and mocks, wireframes and use cases, RBAC.</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="publication" class="container">
-        <h3 style="color: var(--color-wine-primary); text-align: left;font-size: 1.5em;">Publication</h3>
-        <div class="resume-section-card">
-            <h4 style="margin-bottom: 5px;">GPT4DFCI: Red Teaming for Generative AI <br>Report on a Copyright-Focused Exercise Completed in an Academic Medical Center</h4>
-            <p>
-                Wen, James, Sahil Nalawade, Zhiwei Liang, ..., 
-                <strong>
-                    <span style="color: var(--color-wine-primary);">Pooja Kadam</span>
-                </strong>, 
-                ..., Renato Umeton et al. "Red Teaming for Generative AI, Report on a Copyright-Focused Exercise Completed in an Academic Medical Center." <em>arXiv preprint arXiv:2506.22523 (2025)</em>.
-            </p>
-            <a href="https://arxiv.org/abs/2506.22523" target="_blank" class="project-link inline-link">View Publication</a>
-        </div>
-    </section>
-
-    <section id="experience" class="container">
-        <h3 style="color: var(--color-wine-primary); text-align: left;font-size: 1.5em;">Professional Experience</h3>
-        
-        <div class="resume-section-card">
-            <h4>AI/ML Engineer - Unique System Skills Inc | Boston, MA (Aug 2024 – Present)</h4>
-            
-            <div class="sub-project-block">
-                <h5>LLM for Predicting Pancreatic Disease</h5>
-                <ul>
-                    <li>Built a <strong>GPT-based model</strong> to predict pancreatic disease from EHR notes, achieving an <strong>AUC of 0.74</strong> using medical codes.</li>
-                    <li>Applied EHR text processing, predictive modeling, and data standardization, with robust Git version control.</li>
-                    <li>Built <strong>batch and online inference workflows</strong> on Databricks and Snowflake; automated feature pipelines and experiment tracking.</li>
-                </ul>
-                <div class="project-skills">
-                    <span class="tech-tag">GPT Model</span>
-                    <span class="tech-tag">EHR Processing</span>
-                    <span class="tech-tag">Databricks</span>
-                    <span class="tech-tag">Snowflake</span>
-                    <a href="#" target="_blank" class="project-link inline-link">View Project</a>
+    <main>
+        <section id="summary" class="section summary hero-section">
+            <div class="container hero-panel">
+                <div class="hero-mark">PK</div>
+                <p class="hero-role">Data Scientist & AI/ML Scientist</p>
+                <h2 class="hero-name">Pooja <span>Kadam</span></h2>
+                <p class="hero-lede">
+                    Building and deploying scalable AI systems—GenAI, agentic AI, and MLOps across GCP, Databricks, and
+                    Snowflake.
+                </p>
+                <div class="hero-actions">
+                    <a href="mailto:poojakad@bu.edu" class="btn btn-primary">Get in Touch</a>
+                    <a href="https://github.com/PoojaKad19" target="_blank" rel="noreferrer"
+                        class="btn btn-ghost">GitHub</a>
+                    <a href="https://www.linkedin.com/in/poojasureshkadam/" target="_blank" rel="noreferrer"
+                        class="btn btn-ghost">LinkedIn</a>
+                </div>
+                <div class="hero-tags">
+                    <span>Python</span>
+                    <span>LLM/GenAI</span>
+                    <span>Agentic AI</span>
+                    <span>NLP</span>
+                    <span>MLOps</span>
+                    <span>GCP</span>
+                    <span>Databricks</span>
                 </div>
             </div>
-            
-            <div class="sub-project-block">
-                <h5>Agentic RAG Billing Assistant with MultiAgent Orchestration</h5>
-                <ul>
-                    <li>Developed an <strong>agentic RAG billing assistant</strong> using Ollama with multi-agent orchestration, guardrails.</li>
-                    <li>Elicited functional requirements using GUI designs, wireframes, mockups, end-to-end testing.</li>
-                    <li>Deployed <strong>Dockerized microservices</strong> with CI/CD pipelines and telemetry tracking.</li>
-                </ul>
-                <div class="project-skills">
-                    <span class="tech-tag">Agentic AI</span>
-                    <span class="tech-tag">LangChain</span>
-                    <span class="tech-tag">Ollama</span>
-                    <span class="tech-tag">Docker/CI/CD</span>
-                    <a href="#" target="_blank" class="project-link inline-link">View Project</a>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Recent Work</p>
+                    <h2>Projects & Initiatives</h2>
+                    <p class="section-description">Each card includes an image, quick context, and stack tags. Add more
+                        by editing the <code>projectsData</code> array below.</p>
+                </div>
+                <div id="projects-grid" class="card-grid"></div>
+            </div>
+        </section>
+
+        <section id="publication" class="section alt-bg">
+            <div class="container panel">
+                <div class="section-heading">
+                    <p class="eyebrow">Publication</p>
+                    <h2>GPT4DFCI: Red Teaming for Generative AI</h2>
+                </div>
+                <article class="publication-card">
+                    <p>
+                        Wen, James, Sahil Nalawade, Zhiwei Liang, <strong>Pooja Kadam</strong>, Renato Umeton et al.
+                        <em>Red Teaming for Generative AI: A Copyright-Focused Exercise Completed in an Academic Medical
+                            Center.</em>
+                        arXiv:2506.22523 (2025)
+                    </p>
+                    <a href="https://arxiv.org/abs/2506.22523" target="_blank" rel="noreferrer" class="inline-link">Read
+                        the paper</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Capabilities</p>
+                    <h2>Skills & Tooling</h2>
+                    <p class="section-description">Update the <code>skillsData</code> list to surface new proficiencies
+                        without touching layout markup.</p>
+                </div>
+                <div id="skills-grid" class="skills-grid"></div>
+            </div>
+        </section>
+
+        <section id="connect" class="section alt-bg">
+            <div class="container panel">
+                <div class="section-heading">
+                    <p class="eyebrow">Connect</p>
+                    <h2>Let’s build something together</h2>
+                    <p class="section-description">Scroll to reveal each card below—your header contact links glow to
+                        match what’s in view.</p>
+                </div>
+                <div class="connect-grid">
+                    <article id="contact-email" class="connect-card">
+                        <p class="connect-label">Email</p>
+                        <h3>poojakad@bu.edu</h3>
+                        <p>Reach me for collaborations, mentorship chats, or speaking opportunities.</p>
+                        <a href="mailto:poojakad@bu.edu" class="inline-link">Compose email</a>
+                    </article>
+                    <article id="contact-linkedin" class="connect-card">
+                        <p class="connect-label">LinkedIn</p>
+                        <h3>Pooja Suresh Kadam</h3>
+                        <p>Follow recent projects, publications, and AI thought-starters.</p>
+                        <a href="https://www.linkedin.com/in/poojasureshkadam/" target="_blank" rel="noreferrer"
+                            class="inline-link">View profile</a>
+                    </article>
+                    <article id="contact-github" class="connect-card">
+                        <p class="connect-label">GitHub</p>
+                        <h3>@PoojaKad19</h3>
+                        <p>Explore experiments, PoCs, and reproducible research artifacts.</p>
+                        <a href="https://github.com/PoojaKad19" target="_blank" rel="noreferrer"
+                            class="inline-link">Browse repositories</a>
+                    </article>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="sub-project-block">
-                <h5>Multi-Modal AI Agent for Medical Image Classification and Reporting</h5>
-                <ul>
-                    <li>Developed a multi-modal pipeline combining <strong>CNNs</strong> for feature extraction and an <strong>LLM</strong> for generating clinical notes.</li>
-                    <li>Implemented CI/CD pipelines and model performance monitoring with <strong>MLflow and TensorBoard</strong>; added telemetry tracking, <strong>shadow testing</strong>, and rollbacks.</li>
-                </ul>
-                <div class="project-skills">
-                    <span class="tech-tag">Multi-Modal AI</span>
-                    <span class="tech-tag">CNN/ResNet</span>
-                    <span class="tech-tag">MLOPS</span>
-                    <span class="tech-tag">MLflow/W&B</span>
-                    <a href="#" target="_blank" class="project-link inline-link">View Project</a>
-                </div>
-            </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="copyrightYear"></span> Pooja Suresh Kadam. All rights reserved.</p>
+            <a href="mailto:poojakad@bu.edu" class="inline-link">Let’s collaborate</a>
         </div>
-        
-        <div class="resume-section-card">
-            <h4>Data Science Intern - Data Glacier | Boston, MA (Mar 2024 - Aug 2024)</h4>
-            
-            <div class="sub-project-block">
-                <h5>Medical Classification - Chest Tumor / Cancer</h5>
-                <ul>
-                    <li>Designed an image processing and classification pipeline using <strong>CNN and ResNet-50</strong> to classify chest CT scans.</li>
-                    <li>Employed transfer learning, fine-tuning, and EDA to <strong>improve accuracy by 22%</strong>, achieving ~90% on the test dataset.</li>
-                </ul>
-                <div class="project-skills">
-                    <span class="tech-tag">Deep Learning</span>
-                    <span class="tech-tag">CNN/ResNet-50</span>
-                    <span class="tech-tag">Transfer Learning</span>
-                    <a href="#" target="_blank" class="project-link inline-link">View Project</a>
-                </div>
-            </div>
-            
-            <div class="sub-project-block">
-                <h5>Clinical Privacy-Focused Chatbot</h5>
-                <ul>
-                    <li>Developed an internal chatbot prototype using the <strong>Ollama</strong> open-source model, ensuring <strong>PHI compliance</strong> with features like secure data encryption and role-based access.</li>
-                    <li>Tested privacy features using the MIMIC dataset and integrated audit trails for monitoring usage within medical institutions.</li>
-                </ul>
-                <div class="project-skills">
-                    <span class="tech-tag">Ollama</span>
-                    <span class="tech-tag">PHI Compliance</span>
-                    <span class="tech-tag">Chatbot</span>
-                    <span class="tech-tag">Privacy</span>
-                    <a href="#" target="_blank" class="project-link inline-link">View Project</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="resume-section-card">
-            <h4>Supply chain Analyst - IKEA India Pvt Ltd | Mumbai, India (July 2018 – Aug 2022)</h4>
-            <ul>
-                <li>Developed <strong>Bayesian A/B testing toolkit</strong> and inventory forecasting using <strong>R programming</strong>.</li>
-                <li>Achieved <strong>+2.7M sales in 6 months</strong> and <strong>+9.9% availability uplift</strong>.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h3 style="color: var(--color-wine-primary); text-align: left;font-size: 1.5em;">Independent Projects</h3>
-        
-        <div class="project-card">
-            <!-- <img src="https://via.placeholder.com/600x200.png?text=Agentic+AI+App" alt="Temporary image for Agentic MultiAgent Apps" class="project-image-thumb"> -->
-            <h4 style="color: var(--color-project-name-primary); font-size: 1.2em;">Agentic MultiAgent Apps (Streamlit + FastAPI)</h4>
-            <p>Orchestrated specialized planner/retriever/critic agents with memory/tooluse; integrated guardrails and <strong>goldenset evaluators</strong> for safety.</p>
-            <span class="tech-tag">Agentic AI</span>
-            <span class="tech-tag">Streamlit</span>
-            <span class="tech-tag">FastAPI</span>
-            <span class="tech-tag">Evaluators</span>
-            <a href="#" target="_blank" class="project-link inline-link">View Project</a>
-        </div>
-
-        <div class="project-card">
-            <!-- <img src="https://via.placeholder.com/600x200.png?text=FlanT5+Summarization" alt="Temporary image for Enhancing Dialogue Summarization with FlanT5" class="project-image-thumb"> -->
-            <h4 style="color: var(--color-project-name-primary); font-size: 1.2em;">Enhancing Dialogue Summarization with FlanT5</h4>
-            <p>Built conversation summarizer for customer service/medication tracking with <strong>FlanT5</strong>; deployed as a <strong>Streamlit microapp</strong> with <strong>FastAPI backend</strong>, and basic cost/latency telemetry.</p>
-            <span class="tech-tag">FlanT5</span>
-            <span class="tech-tag">Summarization</span>
-            <span class="tech-tag">Streamlit</span>
-            <span class="tech-tag">FastAPI</span>
-            <a href="#" target="_blank" class="project-link inline-link">View Project</a>
-        </div>
-        
-        <div class="project-card">
-            <!-- <img src="https://via.placeholder.com/600x200.png?text=RAG+for+Healthcare" alt="Temporary image for RAG for Healthcare Notes and Billing" class="project-image-thumb"> -->
-            <h4 style="color: var(--color-project-name-primary); font-size: 1.2em;">RAG for Healthcare Notes and Billing</h4>
-            <p>Implemented vector search, retrieval augmentation, and prompt chaining for precise Q&A on notes and billing artifacts; added <strong>PHI-safe preprocessing</strong>.</p>
-            <span class="tech-tag">RAG</span>
-            <span class="tech-tag">Vector DBs</span>
-            <span class="tech-tag">Prompt Chaining</span>
-            <span class="tech-tag">PHI Compliance</span>
-            <a href="#" target="_blank" class="project-link inline-link">View Project</a>
-        </div>
-
-        <div class="project-card">
-            <!-- <img src="https://via.placeholder.com/600x200.png?text=Generative+AI+Plugin" alt="Temporary image for Client-Facing Generative AI Plugin" class="project-image-thumb"> -->
-            <h4 style="color: var(--color-project-name-primary); font-size: 1.2em;">Client-Facing Generative AI Plugin</h4>
-            <p>Developed document intelligence plugin using <strong>LangChain + Semantic Kernel</strong>; reduced analysis time by 35% and standardized multisource ingestion.</p>
-            <span class="tech-tag">LangChain</span>
-            <span class="tech-tag">Semantic Kernel</span>
-            <span class="tech-tag">GenAI Plugin</span>
-            <a href="#" target="_blank" class="project-link inline-link">View Project</a>
-        </div>
-    </section>
-
-    <section id="education" class="container">
-        <h3 style="color: var(--color-wine-primary); text-align: left;font-size: 1.5em;">Education & Awards</h3>
-        
-        <div class="resume-section-card">
-            <h4>Education</h4>
-            <p>
-                <strong>MS in Applied Data Analytics</strong> | Boston University, Boston MA | 05/2024
-                <br>
-                <strong>MTech - Operations Management</strong> | NIFT Entrepreneurship and Management, India | 05/2016
-                <br>
-                <strong>B.E – Biotechnology</strong> | Shivaji University, India | 05/2013
-            </p>
-            
-            <h4>Leadership and Awards</h4>
-            <ul>
-                <li>President of Events Committee, at NIFTEM (August 2014-June 2015).</li>
-                <li>First Prize, National Paper Presentation on Cloud Computing (2013).</li>
-                <li>Coordinator, National Workshop on Cheminformatics & InSilico Drug Design (2012–2013).</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Pooja Suresh Kadam. All rights reserved.</p>
     </footer>
+
+    <script>
+        const projectsData = [
+            {
+                title: "Agentic Workflow Application",
+                context: "Orchestrated planner, retriever, and critic agents with shared memory and guardrails to keep sensitive workflows safe.",
+                impact: "Reduced manual review time by 40% through golden-set evaluators and telemetry dashboards.",
+                stack: ["Agentic AI", "Streamlit", "FastAPI", "Guardrails"],
+                image: "images/Agent.png",
+                link: "#"
+            },
+            {
+                title: "Dialogue Summaries with FlanT5",
+                context: "Fine-tuned FlanT5 for multi-turn medical summaries and shipped a Streamlit micro-app backed by FastAPI.",
+                impact: "Enabled clinicians to triage calls 2× faster with latency and cost monitoring baked in.",
+                stack: ["FlanT5", "Summarization", "Streamlit", "FastAPI"],
+                image: "images/Chat Bot.png",
+                link: "#"
+            },
+            {
+                title: "RAG for Clinical Billing",
+                context: "Implemented PHI-safe preprocessing, vector search, and retrieval orchestration for coding audits.",
+                impact: "Boosted answer precision by 28% on internal notes and billing artifacts.",
+                stack: ["RAG", "Vector DB", "Prompt Chaining", "PHI Compliance"],
+                image: "images/RAG.png",
+                link: "#"
+            },
+            {
+                title: "Generative AI Document Plugin",
+                context: "Shipped LangChain + Semantic Kernel plugin for client-facing document intelligence.",
+                impact: "Standardized multi-source ingestion and cut discovery time by 35%.",
+                stack: ["LangChain", "Semantic Kernel", "Telemetry", "Azure"],
+                image: "https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&w=900&q=80",
+                link: "#"
+            },
+            {
+                title: "Deep Learning Brain Tumor Segmentation",
+                context: "Implemented U-Net, DenseNet, and Swin UNETR pipelines with MONAI and PyTorch for BraTS multi-class sub-region segmentation.",
+                impact: "Achieved 0.91 Dice coefficient using a hybrid Dice–Cross Entropy loss to balance volumetric class skew.",
+                stack: ["MONAI", "PyTorch", "U-Net", "Swin UNETR"],
+                image: "images/Segmentation.png",
+                link: "#"
+            },
+            {
+                title: "BraTS Radiomics Classification",
+                context: "Built a PyRadiomics feature pipeline with Random Forest and SVM ensembles, plus voxel resampling and Z-score normalization.",
+                impact: "Reached 82% accuracy / 0.85 F1 on BraTS by pairing feature selection with custom class-weighted losses.",
+                stack: ["PyRadiomics", "scikit-learn", "Random Forest", "SVM"],
+                image: "images/Radiomics.png",
+                link: "#"
+            },
+            {
+                title: "Radiomics Feature Selection Engine",
+                context: "Engineered a TCGA-LGG reduction workflow with PCA, GridSearchCV, and XGBoost to isolate the top 15 predictor signals.",
+                impact: "Delivered 0.89 AUC-ROC while streamlining disease classification through log-loss optimized gradient boosting.",
+                stack: ["TCGA-LGG", "PCA", "XGBoost", "Gradient Boosting"],
+                image: "images/feature_selection.png",
+                link: "#"
+            }
+        ];
+
+        const skillsData = [
+            {
+                title: "Generative AI",
+                items: ["GPT, GPT4DFCI, Llama, Mixtral", "Prompt design, guardrails, evaluations", "Multi-agent planners & tooluse"]
+            },
+            {
+                title: "MLOps & Cloud",
+                items: ["Docker, CI/CD, MLflow, Weights & Biases", "Vertex AI, Snowflake, Databricks", "Telemetry, model registry, rollbacks"]
+            },
+            {
+                title: "Applications & UX",
+                items: ["Streamlit, FastAPI, Flask", "Wireframes, UI logic, user testing", "RBAC, audit trails, compliance"]
+            },
+            {
+                title: "Data & Analytics",
+                items: ["Python, R, SQL, MATLAB", "Experiment design, dashboards, Power BI", "Statistical modeling, feature stores"]
+            }
+        ];
+
+        const projectsGrid = document.getElementById("projects-grid");
+        const skillsGrid = document.getElementById("skills-grid");
+        const body = document.body;
+        const themeToggle = document.getElementById("themeToggle");
+        const navLinks = document.querySelectorAll(".site-nav a");
+        const contactLinks = document.querySelectorAll(".contact-inline a[data-section]");
+
+        const applyTheme = (theme) => {
+            body.setAttribute("data-theme", theme);
+            localStorage.setItem("portfolio-theme", theme);
+            themeToggle.querySelector(".toggle-label").textContent = theme === "dark" ? "Dark" : "Light";
+            themeToggle.querySelector(".toggle-icon").textContent = theme === "dark" ? "☾" : "☀";
+        };
+
+        const initTheme = () => {
+            const storedTheme = localStorage.getItem("portfolio-theme");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            applyTheme(storedTheme || (prefersDark ? "dark" : "light"));
+        };
+
+        const renderProjects = () => {
+            projectsData.forEach((project) => {
+                const card = document.createElement("article");
+                card.className = "project-card";
+                card.innerHTML = `
+                    <div class="project-media">
+                        <img src="${project.image}" alt="${project.title} preview" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>${project.title}</h3>
+                        <p>${project.context}</p>
+                        <p class="project-impact">${project.impact}</p>
+                        <div class="tag-list">
+                            ${project.stack.map(tag => `<span class="tag">${tag}</span>`).join("")}
+                        </div>
+                        <a href="${project.link}" target="_blank" rel="noreferrer" class="inline-link">View project</a>
+                    </div>
+                `;
+                projectsGrid.appendChild(card);
+            });
+        };
+
+        const renderSkills = () => {
+            skillsData.forEach((group) => {
+                const skillCard = document.createElement("article");
+                skillCard.className = "skills-card";
+                skillCard.innerHTML = `
+                    <h3>${group.title}</h3>
+                    <ul>
+                        ${group.items.map(item => `<li>${item}</li>`).join("")}
+                    </ul>
+                `;
+                skillsGrid.appendChild(skillCard);
+            });
+        };
+
+        const navSections = Array.from(navLinks).map((link) => {
+            const target = document.querySelector(link.getAttribute("href"));
+            return target ? { section: target, link } : null;
+        }).filter(Boolean);
+
+        const contactSections = Array.from(contactLinks).map((link) => {
+            const target = document.querySelector(link.dataset.section);
+            return target ? { section: target, link } : null;
+        }).filter(Boolean);
+
+        const highlightActiveLink = (entries, linkPairs) => {
+            entries.forEach((entry) => {
+                const activePair = linkPairs.find((pair) => pair.section === entry.target);
+                if (!activePair) return;
+                const allLinks = linkPairs.map((pair) => pair.link);
+
+                if (entry.isIntersecting) {
+                    allLinks.forEach((link) => link.classList.remove("is-active"));
+                    activePair.link.classList.add("is-active");
+                }
+            });
+        };
+
+        const sectionObserver = new IntersectionObserver(
+            (entries) => highlightActiveLink(entries, navSections),
+            {
+                threshold: 0.3,
+                rootMargin: "-25% 0px -45% 0px"
+            }
+        );
+
+        navSections.forEach(({ section }) => sectionObserver.observe(section));
+
+        const contactObserver = new IntersectionObserver(
+            (entries) => highlightActiveLink(entries, contactSections),
+            {
+                threshold: 0.5,
+                rootMargin: "-15% 0px -30% 0px"
+            }
+        );
+
+        contactSections.forEach(({ section }) => contactObserver.observe(section));
+
+        themeToggle.addEventListener("click", () => {
+            const nextTheme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            applyTheme(nextTheme);
+        });
+
+        document.getElementById("copyrightYear").textContent = new Date().getFullYear();
+
+        initTheme();
+        renderProjects();
+        renderSkills();
+    </script>
 </body>
+
 </html>
