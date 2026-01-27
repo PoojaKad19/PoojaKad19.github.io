@@ -2,9 +2,9 @@
 
 **AI/ML Engineer | GenAI, Agentic AI, and MLOPS**
 
-| Email | Phone | Location | LinkedIn | GitHub |
+| Email | Portfolio | Location | LinkedIn | GitHub |
 | :---: | :---: | :---: | :---: | :---: |
-| [poojakad@bu.edu](mailto:poojakad@bu.edu) | **** *** **** | Boston, MA | [LinkedIn Profile](https://linkedin.com/in/your-linkedin) | [GitHub Repos](https://github.com/PoojaKad19) |
+| [poojakad@bu.edu](mailto:poojakad@bu.edu) | [Portfolio](https://poojakad19.github.io/) | Boston, MA | [LinkedIn Profile](https://linkedin.com/in/your-linkedin) | [GitHub Repos](https://github.com/PoojaKad19) |
     
 ---
 
