@@ -4,7 +4,7 @@
 
 | Email | Phone | Location | LinkedIn | GitHub |
 | :---: | :---: | :---: | :---: | :---: |
-| [poojakad@bu.edu](mailto:poojakad@bu.edu) | 781-658-4717 | Boston, MA | [LinkedIn Profile](https://linkedin.com/in/your-linkedin) | [GitHub Repos](https://github.com/your-username) |
+| [poojakad@bu.edu](mailto:poojakad@bu.edu) | *** | Boston, MA | [LinkedIn Profile](https://linkedin.com/in/your-linkedin) | [GitHub Repos](https://github.com/your-username) |
 
 ---
 
